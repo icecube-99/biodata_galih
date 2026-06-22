@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Galih Rizky  | Futuristic Portfolio</title>
+    <title>Galih Rizky | Futuristic Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -14,218 +12,66 @@
 
     <!-- ICON -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <!-- BACKGROUND -->
-    <div class="background"></div>
-
-    <!-- AUDIO -->
-    <audio id="bgMusic">
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
-
-    <!-- MUSIC BUTTON -->
-    <button id="musicBtn" class="music-btn">
-        🎵
-    </button>
-
-    <!-- NAVBAR -->
-    <nav>
-
-        <div class="logo">
-            🚀 GAVI.PRO
-        </div>
-
-        <ul>
-
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#hobby">Hobi</a></li>
-            <li><a href="#motto">Moto</a></li>
-            <li><a href="#skills">Skill</a></li>
-            <li><a href="#contact">Kontak</a></li>
-
-        </ul>
-
-    </nav>
-
-    <!-- HERO -->
-    <section id="home" class="hero">
-
-        <div class="profile-container">
-
-            <div class="profile-ring"></div>
-
-            <img src="fotogalih.jpg"
-            alt="Galih Rizky Purnomo"
-            class="profile-img">
-
-        </div>
-
-        <div class="hero-content">
-
-            <h1>👋 Halo, Saya</h1>
-
-            <h2 id="typing"></h2>
-
-            <p>
-                🎓 Mahasiswa Universitas Pamulang <br>
-                💻 Web Development Enthusiast <br>
-                🤖 AI Enthusiast <br>
-                🚀 Future Technology Creator
-            </p>
-
-            <button id="welcomeBtn" class="hero-btn">
-                ✨ Kenali Saya
-            </button>
-
-        </div>
-
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-
-        <h2 class="section-title">
-            🌌 Tentang Saya
-        </h2>
-
-        <div class="glass-card">
-
-            <p>
-                Saya adalah Galih Rizky Purnomo,
-                mahasiswa Universitas Pamulang yang memiliki
-                minat besar di bidang teknologi, web development,
-                artificial intelligence, dan dunia digital.
-
-                Saya percaya bahwa setiap hari adalah kesempatan
-                untuk belajar sesuatu yang baru.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- HOBBY -->
-    <section id="hobby">
-
-        <h2 class="section-title">
-            🎧 Hobi Saya
-        </h2>
-
-        <div class="glass-card">
-
-            <h3>🎵 Mendengarkan Musik</h3>
-
-            <p>
-                Musik membantu saya fokus saat belajar,
-                mengerjakan project, dan menjadi sumber
-                inspirasi dalam aktivitas sehari-hari.
-
-
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- MOTTO -->
-    <section id="motto">
-
-        <h2 class="section-title">
-            ✨ Moto Hidup Saya
-        </h2>
-
-        <div class="glass-card">
-
-            <h3 class="quote">
-                "Terus belajar, terus berkembang,
-                dan jangan pernah takut mencoba hal baru."
-            </h3>
-
-        </div>
-
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-
-        <h2 class="section-title">
-            ⚡ Skill Saya
-        </h2>
-
-        <div class="skills-container">
-
-            <div class="skill-card">💻 HTML</div>
-
-            <div class="skill-card">🎨 CSS</div>
-
-            <div class="skill-card">⚙️ JavaScript</div>
-
-            <div class="skill-card">🐍 Python</div>
-
-            <div class="skill-card">🤖 AI</div>
-
-            <div class="skill-card">🔐 Cyber Security</div>
-
-        </div>
-
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-
-        <h2 class="section-title">
-            📬 Hubungi Saya
-        </h2>
-
-        <div class="social-container">
-
-            <a href="https://www.instagram.com/n.nacht_120506?igsh=bjZ3c2RpNm55aGI4"
-            target="_blank"
-            class="social instagram">
-
-                <i class="fab fa-instagram"></i>
-
-            </a>
-
-            <a href="https://github.com/icecube-99"
-            target="_blank"
-            class="social github">
-
-                <i class="fab fa-github"></i>
-
-            </a>
-
-            <a href="mailto:galihrizky752@gmail.com"
-            class="social email">
-
-                <i class="fas fa-envelope"></i>
-
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
+<div class="background"></div>
+
+<!-- AUDIO -->
+<audio id="bgMusic">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MUSIC BUTTON -->
+<button id="musicBtn" class="music-btn">🎵</button>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">🚀 GAVI.PRO</div>
+
+    <!-- SERVER STATUS -->
+    <div id="serverStatus" class="server-status offline">
+        🔴 OFFLINE
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#hobby">Hobi</a></li>
+        <li><a href="#motto">Moto</a></li>
+        <li><a href="#skills">Skill</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="profile-container">
+        <div class="profile-ring"></div>
+        <img src="fotogalih.jpg" class="profile-img" alt="Galih">
+    </div>
+
+    <div class="hero-content">
+        <h1>👋 Halo, Saya</h1>
+        <h2 id="typing"></h2>
 
         <p>
-            🚀 Created By Galih Rizky Purnomo
+            🎓 Mahasiswa Universitas Pamulang <br>
+            💻 Web Development Enthusiast <br>
+            🤖 AI Enthusiast <br>
+            🚀 Future Technology Creator
         </p>
 
-        <span>
-            © 2026 All Rights Reserved
-        </span>
+        <button id="welcomeBtn" class="hero-btn">✨ Kenali Saya</button>
+    </div>
+</section>
 
-    </footer>
+<footer>
+    <p>🚀 Created By Galih Rizky Purnomo</p>
+    <span>© 2026 All Rights Reserved</span>
+</footer>
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
