@@ -1,0 +1,445 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:white;
+    background:#050816;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND FUTURISTIC
+========================= */
+
+.background{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+    background:
+    radial-gradient(circle at 20% 20%, rgba(0,255,255,.20), transparent 25%),
+    radial-gradient(circle at 80% 20%, rgba(255,0,255,.20), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(0,255,128,.15), transparent 25%),
+    linear-gradient(
+        135deg,
+        #020617,
+        #050816,
+        #0f172a,
+        #020617
+    );
+
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 10%;
+
+    background:rgba(0,0,0,.3);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,255,255,.1);
+}
+
+.logo{
+    font-family:'Orbitron',sans-serif;
+    font-size:24px;
+    font-weight:bold;
+
+    color:#00ffff;
+
+    text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00ffff;
+
+    text-shadow:
+    0 0 10px #00ffff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:80px;
+
+    padding:50px;
+}
+
+.profile-container{
+    position:relative;
+    width:320px;
+    height:320px;
+}
+
+.profile-ring{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    border:4px solid #00ffff;
+
+    animation:ringRotate 8s linear infinite;
+
+    box-shadow:
+    0 0 20px #00ffff,
+    0 0 40px #00ffff,
+    0 0 80px #00ffff;
+}
+
+@keyframes ringRotate{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.profile-img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #00ffff;
+
+    position:relative;
+    z-index:2;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.hero-content h2{
+    font-family:'Orbitron',sans-serif;
+
+    font-size:60px;
+
+    color:#00ffff;
+
+    text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #00ffff;
+}
+
+.hero-content p{
+    margin-top:20px;
+    line-height:1.8;
+}
+
+.hero-btn{
+    margin-top:25px;
+
+    padding:15px 35px;
+
+    border:none;
+    border-radius:50px;
+
+    background:#00ffff;
+    color:black;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 15px #00ffff,
+    0 0 30px #00ffff;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:90px 10%;
+}
+
+.section-title{
+    text-align:center;
+
+    margin-bottom:40px;
+
+    font-size:40px;
+
+    color:#00ffff;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass-card{
+    max-width:900px;
+
+    margin:auto;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.3s;
+}
+
+.glass-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,.4);
+}
+
+.quote{
+    text-align:center;
+    color:#00ffff;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+}
+
+.skill-card{
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+
+    transition:.3s;
+
+    font-weight:bold;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 15px #00ffff,
+    0 0 30px #00ffff;
+}
+
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.social-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.social{
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:30px;
+
+    background:rgba(255,255,255,.05);
+
+    transition:.3s;
+}
+
+.social:hover{
+    transform:translateY(-10px);
+}
+
+.instagram:hover{
+    color:#ff4fd8;
+    box-shadow:0 0 25px #ff4fd8;
+}
+
+.github:hover{
+    color:#00ffff;
+    box-shadow:0 0 25px #00ffff;
+}
+
+.email:hover{
+    color:#00ff99;
+    box-shadow:0 0 25px #00ff99;
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-btn{
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:70px;
+    height:70px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#00ffff;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    z-index:1000;
+
+    box-shadow:
+    0 0 15px #00ffff,
+    0 0 35px #00ffff;
+
+    transition:.3s;
+}
+
+.music-btn:hover{
+    transform:scale(1.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:30px;
+
+    background:rgba(0,0,0,.2);
+
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+footer p{
+    color:#00ffff;
+    margin-bottom:8px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        gap:40px;
+    }
+
+    .hero-content h2{
+        font-size:40px;
+    }
+
+    .profile-container{
+        width:250px;
+        height:250px;
+    }
+
+}
